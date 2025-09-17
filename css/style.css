@@ -1,0 +1,39 @@
+/* Resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Root Variables */
+:root {
+  --color-primary: #ff5722;
+  --color-secondary-dark: #ff7a50;
+  --color-secondary-light: #ffa589;
+  --color-secondary-ligh2: #fff6f2;
+  --color-navbar: #f8f8f8;
+  --color-nav-headings: #545454;
+  --color-h2: #000000;
+  --color-h3: #141414;
+  --color-white: #ffffff;
+  --color-body: #333333;
+  --radius-large: 32px;
+  --radius-medium: 20px;
+  --radius-small: 8px;
+}
+
+body {
+  color: var(--color-body);
+}
+
+h1,
+h2 {
+  color: var(--color-h2);
+}
+h3 {
+  color: var(--color-h3);
+}
