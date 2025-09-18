@@ -17,7 +17,7 @@
   --color-secondary-ligh2: #fff6f2;
   --color-navbar: #f8f8f8;
   --color-nav-headings: #545454;
-  --color-h2: #000000;
+  --color-headings: #000000;
   --color-h3: #141414;
   --color-white: #ffffff;
   --color-body: #333333;
@@ -25,15 +25,77 @@
   --radius-medium: 20px;
   --radius-small: 8px;
 }
+html {
+  font-size: 62.5%;
+}
 
 body {
   color: var(--color-body);
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 h1,
-h2 {
-  color: var(--color-h2);
-}
+h2,
 h3 {
-  color: var(--color-h3);
+  color: var(--color-headings);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2,
+h3 {
+  font-size: 2.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  padding: 2rem 2.5rem;
+  margin: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  /* font-weight: 700; */
+  border-radius: var(--radius-small);
+  border: none;
+  outline: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.btn--primary {
+  background-color: var(--color-primary);
+}
+.btn--secondary {
+  background-color: var(--color-secondary-light);
+}
+.btn-block {
+  width: 100%;
+  display: block;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+  .btn-block {
+    font-size: 2rem;
+  }
 }
