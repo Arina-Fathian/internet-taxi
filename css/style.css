@@ -155,13 +155,12 @@ h3 {
 /* Plan Section */
 .plan-section {
   display: grid;
-  gap: 5rem 3rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+  gap: 9rem 6rem;
   margin-top: 5rem;
 }
 .plan {
-  /* display: flex;
-  flex-direction: column; */
-  max-width: 450px;
   font-size: 1.8rem;
   transition: all 0.2s ease-out;
 }
@@ -222,13 +221,16 @@ h3 {
 }
 
 @media screen and (min-width: 1024px) {
-  .plan-section {
-    /* flex-direction: row; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem 4rem;
-  }
+  /* .plan-section {
+
+  } */
   .plan .btn-block {
     font-size: 1.8rem;
   }
+}
+
+/* Container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
