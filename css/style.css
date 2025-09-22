@@ -155,17 +155,15 @@ h3 {
 /* Plan Section */
 .plan-section {
   display: grid;
-  /* margin: 1rem 5rem; */
-  /* grid-template-columns: 1fr; */
-  gap: 2rem 3rem;
-  margin-top: 2rem;
-  /* justify-content: center; */
-  /* align-items: center; */
+  gap: 5rem 3rem;
+  margin-top: 5rem;
 }
 .plan {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
+  /* display: flex;
+  flex-direction: column; */
+  max-width: 450px;
+  font-size: 1.8rem;
+  transition: all 0.2s ease-out;
 }
 .card {
   border-radius: var(--radius-medium);
@@ -177,15 +175,60 @@ h3 {
   padding: 3rem 2.5rem;
 }
 .card__header {
+  color: var(--color-white);
+}
+.card--primary .card__header {
+  background-color: var(--color-secondary-dark);
+}
+.card--secondary .card__header {
   background-color: var(--color-secondary-light);
 }
 .card__body {
   background-color: var(--color-secondary-ligh2);
 }
+.plan__intro {
+  display: flex;
+  /* flex-direction: row; */
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+.plan__price {
+  font-size: 3rem;
+}
+.plan__billing-cycle {
+  font-size: 1.4rem;
+}
+.plan__description {
+  margin-top: 2rem;
+  display: block;
+  font-size: 1.8rem;
+}
+.plan__feature {
+  margin-bottom: 10rem;
+}
+.plan .btn-block {
+  font-size: 1.6rem;
+  margin-top: 10rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
+}
 
 @media screen and (min-width: 1024px) {
   .plan-section {
-    flex-direction: row;
+    /* flex-direction: row; */
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 4rem;
+  }
+  .plan .btn-block {
+    font-size: 1.8rem;
   }
 }
